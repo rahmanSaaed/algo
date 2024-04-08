@@ -1,7 +1,7 @@
 function mergeSort(arr) {
     debugger
     // Base case: if the array has 0 or 1 element, it is already sorted
-    if (arr.length <= 1) {
+     if (arr.length <=1) {
         return arr;
     }
 
@@ -19,6 +19,9 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
+
+    debugger
+
     let merged = [];
     let leftIndex = 0;
     let rightIndex = 0;
@@ -53,3 +56,14 @@ function merge(left, right) {
 const arr = [12, 11, 13, 5, 6, 7];
 const sortedArr = mergeSort(arr);
 console.log("Sorted array:", sortedArr);
+
+
+// functions 1. mergeSort 2. merge
+
+// merge inputes: array
+  // return :  Base case: if the array has 0 or 1 element, it is already sorted
+  // Divide the array into two halves
+  // repeat the process 
+
+// merge  inputes: left:Arr, right:Arr
+
