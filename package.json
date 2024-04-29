@@ -2,7 +2,7 @@
   "name": "project-algo",
   "version": "1.0.0",
   "description": "",
-  "main": "segregatio-merge-sort.js",
+  "main": "activity-selectionproblem-greedy-algorithm.js",
   "scripts": {
     "test": "ls"
   },

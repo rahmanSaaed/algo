@@ -1,68 +1,73 @@
-function segregate(array, start, end) {
-    debugger
-    if (end <= start) {
-        return;
+
+
+function mergeSort(array, start, end) {
+    if (start >= end) {
+        return
     }
 
-    // debugger
-    // divie
-    let mid = Math.floor((start + end) / 2);
-    segregate(array, start, mid);
-    segregate(array, mid + 1, end);
+   let mid = Math.floor((start + end) / 2)
+
+    mergeSort(array, start, mid);
+    mergeSort(array, mid + 1, end);
     merge(array, start, mid, end);
+
 }
 
-function merge(array, start, mid, end) {
-    debugger
+ function merge(array, start, mid, end) {
+    let leftArray, rightArray;
+    leftArray = array.slice(start, mid + 1);
+    rightArray = array.slice(mid + 1, end + 1);
 
-    // //  add right and left to arrays
-    let leftLength = mid - start + 1;
-    let rightLength = end - mid;
+    let i, j, k;
+    i = 0; 
+    j = 0;
+    k = start;
 
-    let leftArray = new Array(leftLength);
-    let rightArray = new Array(rightLength);
+    while(i < leftArray.length && rightArray.length > j) {
+        if (leftArray[i] < rightArray[j] ) {
+            array[k] = leftArray[i];
+            i++;
+            k++;
 
-    for (let i = 0; i < leftLength; i++) {
-        leftArray[i] = array[start + i];
+        } else {
+            array[k] = rightArray[j];
+            j++;
+            k++;
+        }
     }
 
-    for (let j = 0; j < rightLength; j++) {
-        rightArray[j] = array[mid + 1 + j];
-    }
-
-    let i = 0;
-    let j = 0;
-    let k = start;
-
-    // filter nrgative naumber
-    while (i < leftLength && leftArray[i] <= 0) {
+    while(leftArray.length > i) {
         array[k] = leftArray[i];
         i++;
         k++;
     }
 
-    while (j < rightLength && rightArray[j] <= 0) {
-        array[k] = rightArray[j];
-        j++;
-        k++;
-    }
-
-    // add remaining
-    while (i < leftLength) {
-        array[k] = leftArray[i];
-        i++;
-        k++;
-    }
-    while (j < rightLength) {
+    while(rightArray.length > j) {
         array[k] = rightArray[j];
         j++;
         k++;
     }
 }
 
-let array = [6, -5, 12, 10, -9, -1];
-console.log(array);
-segregate(array, 0, array.length - 1);
-console.log(array);
 
-// divide
+// Example usage:
+let array = [12, 11, 13, 5, 6, 7];
+mergeSort(array, 0, array.length - 1);
+console.log("Sorted array:", array);
+
+
+//mergeSort
+  // baseCase
+  // calc mid point 
+  // mergeSort
+  // mergeSort
+  // merge
+
+// merge
+  // left Array
+  // right Array
+  // init i, j, k
+  // combare two Arrayes and assign to main Array
+  // assign remain items to main Array
+
+ 
