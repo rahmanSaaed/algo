@@ -10,6 +10,30 @@
     // get the char by the code 
     // print code and char
 
+  /// AnyCodeMethod
+    // init objectFreq
+    // for loop over message 
+    // check if letter is exist 
+    // count ++
+    // else add it to the object and assign 1 to the value 
+
+
+  function  AnyCodeMethod(message) {
+    let reqObj = {};
+
+    for (let i = 0; i < message.length; i++) {
+        if ( reqObj[message[i]] ) {
+            reqObj[message[i]]++
+        } else {
+            reqObj[message[i]] = 1;
+        }
+
+    }
+
+    console.log("AnyCodeMethod", reqObj);
+
+    }
+
  function charFreq(message) {
     // debugger
     const chars = new Array(127).fill(0)
@@ -46,4 +70,5 @@
 
 
   const arrFreq = charFreq("Hellow World");
+  AnyCodeMethod("Hellow world");
   console.log("const", arrFreq)
