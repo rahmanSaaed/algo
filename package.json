@@ -2,7 +2,7 @@
   "name": "project-algo",
   "version": "1.0.0",
   "description": "",
-  "main": "sorted-characters-frequencies.js",
+  "main": "huffman-code.js",
   "scripts": {
     "test": "ls"
   },
