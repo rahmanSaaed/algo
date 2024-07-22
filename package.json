@@ -2,7 +2,7 @@
   "name": "project-algo",
   "version": "1.0.0",
   "description": "",
-  "main": "huffman-code.js",
+  "main": "longest-common-string.js",
   "scripts": {
     "test": "ls"
   },
