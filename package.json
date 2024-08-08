@@ -2,10 +2,13 @@
   "name": "project-algo",
   "version": "1.0.0",
   "description": "",
-  "main": "longest-common-string.js",
+  "main": "knapsack-problem-dynamic-programming.js",
   "scripts": {
     "test": "ls"
   },
   "author": "",
   "license": "ISC"
 }
+
+
+

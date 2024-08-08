@@ -7,7 +7,7 @@ text_01 = " " + text_01;
 text_02 = " " + text_02;
 
 dp = [];
-
+debugger
 for (var i = 0; i <= m; i++) {
   dp[i] = [];
   for (var j = 0; j <= n; j++) {
@@ -24,12 +24,15 @@ for (var i = 0; i <= m; i++) {
   }
 }
 
+console.log(dp);
+
+
 // start from the bottom right
 // if current value > left value
 // -- if current value == top value
 // -- -- //the current value inherted from top
 // -- -- move to top row
-// -- else 
+// -- else
 // -- -- //current value is origin of match
 // -- -- add the char to the solution
 // -- -- move to the top row
